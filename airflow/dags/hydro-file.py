@@ -25,7 +25,7 @@ s3_client = boto3.client('s3', aws_access_key_id=aws_access_key_id,
 
 def transfer_latest_file_to_s3():
     # Set the folder path
-    folder_path = '/home/awais/airflow/bin/'
+    folder_path = '/your/folder/path/'
 
     # Get the list of files in the folder
     file_list = glob.glob(os.path.join(folder_path, '*'))
@@ -38,7 +38,7 @@ def transfer_latest_file_to_s3():
         latest_file_path = file_list[0]
 
         # Set the S3 destination details
-        s3_bucket_name = 'odyssey-data-lake'
+        s3_bucket_name = 'my-bucket'
         s3_key = 'hydro-carbon/' + os.path.basename(latest_file_path)
 
         # Upload the latest file to S3
@@ -83,7 +83,7 @@ file_sensor_task = FileSensor(
     poke_interval=20,
     timeout=600,
     mode='poke',
-    filepath='/home/awais/airflow/bin/',
+    filepath='/your/folder/path/',
     dag=dag
 )
 
@@ -106,14 +106,9 @@ move_to_procesed_folder = PythonOperator(
 )
 
 
-
-
-
-
-
-
 end = EmptyOperator(
     task_id='end'
 )
+
 
 start >> file_sensor_task >> upload_to_s3 >> move_to_procesed_folder >> end
