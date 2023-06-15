@@ -68,7 +68,14 @@ delete = PythonOperator(
     email='abc@gmail.net',
     email_on_failure =True,
     dag=dag
-
 )
 
-start >> delete >> sending_email_notification
+end = BashOperator(
+    task_id='end',
+    bash_command='echo "Logs have been deleted"',
+    dag=dag
+)
+
+
+
+start >> delete >> sending_email_notification >> end
