@@ -16,6 +16,7 @@ from airflow.operators.empty import EmptyOperator
 
 def db_init():
     try:
+
         # Get the database credentials from the Airflow Connection
         conn_id = ""  # Replace with your Airflow Connection ID
         airflow_var = Variable.get(conn_id, deserialize_json=True)
@@ -44,7 +45,8 @@ def db_init():
     except Exception as e:
         error_message = str(e)
         create_log_error(error_message, log_error=True)
-        raise  # Re-raise the exception to let Airflow handle the failure
+        raise 
+	    # Re-raise the exception to let Airflow handle the failure
 
 
 
@@ -189,7 +191,7 @@ def create_log_error(log_message, log_error=False):
     if not os.path.exists(log_folder):
         os.makedirs(log_folder)
 
-    # Generate the log file path
+    # Generate the log file path to check logs in detail later
     log_file_path = os.path.join(log_folder, f"{date_string}_log.txt")
 
     # Write the log message to the log file

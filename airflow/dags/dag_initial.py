@@ -28,7 +28,7 @@ with DAG("my_dag", start_date=datetime(2021, 1, 1),
         task_id="training_model_A",
         python_callable=_training_model
     )
-
+    #statment to compare a model initialization
     training_model_B = PythonOperator(
         task_id="training_model_B",
         python_callable=_training_model

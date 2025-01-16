@@ -37,11 +37,11 @@ def transfer_latest_file_to_s3():
     if len(file_list) > 0:
         latest_file_path = file_list[0]
 
-        # Set the S3 destination details
+        # Set the S3 destination details here
         s3_bucket_name = 'my-bucket'
         s3_key = 'hydro-carbon/' + os.path.basename(latest_file_path)
 
-        # Upload the latest file to S3
+        # Upload the latest file to S3 directory
         s3_client = boto3.client('s3')
         s3_client.upload_file(
             latest_file_path,
