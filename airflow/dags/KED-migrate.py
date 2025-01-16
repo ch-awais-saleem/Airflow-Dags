@@ -18,7 +18,7 @@ def db_init():
     try:
 
         # Get the database credentials from the Airflow Connection
-        conn_id = ""  # Replace with your Airflow Connection ID
+        conn_id = ""  # Replace with your Airflow Connection ID 
         airflow_var = Variable.get(conn_id, deserialize_json=True)
 
         # # Create the connection URL
@@ -124,6 +124,7 @@ def dataprocessing():
                     # send_error_email(e)
 	            
                 try:
+		    # print the insertion query below
                     # print(insert_query)
                     # print(insert_update_staging)
                     if len(insert_query) > 0:
