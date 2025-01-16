@@ -9,7 +9,7 @@ This repository showcases a collection of **Apache Airflow DAGs** demonstrating 
 - Examples of error handling, retries, and notifications.  
 - Custom operators for specialized tasks.  
 
-## Prerequisites  
+## Prerequisites
 
 - Python 3.7+  
 - Apache Airflow 2.x+  
