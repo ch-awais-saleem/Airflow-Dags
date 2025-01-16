@@ -46,7 +46,7 @@ task_3 = BashOperator(
     dag=dag
 )
 
-# Set up dependencies
+# Set up dependencies here accordingly
 # task_1 >> run_python_script >> task_3 >> python_script
  
 
