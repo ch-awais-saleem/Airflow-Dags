@@ -1,4 +1,4 @@
-# Airflow DAGs Setup and Scenarios  
+# Airflow DAGs Setup and Scenarios
 
 This repository showcases a collection of **Apache Airflow DAGs** demonstrating various real-world scenarios, configurations, and best practices. It is designed to help data engineers and developers efficiently implement and manage workflows using Airflow.  
 
