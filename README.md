@@ -1,4 +1,4 @@
-# Airflow DAGs Setup and Scenarios  
+# Airflow DAGs Setup and Scenarios
 
 This repository showcases a collection of **Apache Airflow DAGs** demonstrating various real-world scenarios, configurations, and best practices. It is designed to help data engineers and developers efficiently implement and manage workflows using Airflow.  
 
@@ -18,7 +18,7 @@ This repository showcases a collection of **Apache Airflow DAGs** demonstrating 
 
 ## Example Scenarios
 
-### ETL Pipeline
+### ETL Pipeline  
 
 Extract, transform, and load data with retry mechanisms and task dependencies.
 ### API Integration
