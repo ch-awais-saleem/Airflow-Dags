@@ -18,7 +18,7 @@ This repository showcases a collection of **Apache Airflow DAGs** demonstrating 
 
 ## Example Scenarios
 
-### ETL Pipeline
+### ETL Pipeline  
 
 Extract, transform, and load data with retry mechanisms and task dependencies.
 ### API Integration
